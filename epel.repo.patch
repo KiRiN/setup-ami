@@ -1,0 +1,19 @@
+*** epel.repo.bk	2012-03-04 12:30:03.204340153 +0000
+--- epel.repo	2012-03-04 12:30:34.759542697 +0000
+***************
+*** 3,9 ****
+  #baseurl=http://download.fedoraproject.org/pub/epel/6/$basearch
+  mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=epel-6&arch=$basearch
+  failovermethod=priority
+! enabled=0
+  gpgcheck=1
+  gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6
+  
+--- 3,9 ----
+  #baseurl=http://download.fedoraproject.org/pub/epel/6/$basearch
+  mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=epel-6&arch=$basearch
+  failovermethod=priority
+! enabled=1
+  gpgcheck=1
+  gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6
+  
