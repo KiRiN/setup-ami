@@ -30,8 +30,20 @@ sudo rpm -ivh http://rpm.typesafe.com/typesafe-repo-2.0.0-1.noarch.rpm
 sudo yum install --nogpgcheck sbt
 sbt
 
-# install scalatra
-git clone http://github.com/scalatra/scalatra-sbt-prototype.git ~/git/scalatra-sbt-prototype.git
+# conscript & giter8
+curl https://raw.github.com/n8han/conscript/master/setup.sh | sh
+cs n8han/giter8
+
+# scalatra example
+## mkdir ~/scalatra
+## cd ~/scalatra
+## g8 scalatra/scalatra-sbt
+### default value
+## cd  scalatra-sbt-prototype
+## sbt
+### > container:start & access with http port 8080
+
+
 
 
 
