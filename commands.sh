@@ -1,9 +1,13 @@
 #!/bin/sh
 # working on AMI Linux image x86_64
 
-# enable epel repo
+# install and enable epel repo
 sudo yum install patch
-patch /etc/yum.repos.d/epel.repo epel.repo.patch
+sudo patch /etc/yum.repos.d/epel.repo epel.repo.patch
+
+# install and disable rpm forge repo
+sudo rpm -ivh http://packages.sw.be/rpmforge-release/rpmforge-release-0.5.1-1.el5.rf.x86_64.rpm
+sudo patch /etc/yum.repos.d/rpmforge.repo rpmforge.repo.patch
 
 # install tools
 sudo yum install tmux
@@ -33,6 +37,8 @@ sbt
 # conscript & giter8
 curl https://raw.github.com/n8han/conscript/master/setup.sh | sh
 cs n8han/giter8
+# below comand raise error
+# cs harrah/xsbt --branch 0.11.2
 
 # scalatra example
 ## mkdir ~/scalatra
