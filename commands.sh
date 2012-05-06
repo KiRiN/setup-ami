@@ -12,6 +12,9 @@ sudo patch /etc/yum.repos.d/rpmforge.repo rpmforge.repo.patch
 # install tools
 sudo yum install tmux
 sudo yum install git
+sudo yum install make
+sudo yum install gcc
+sudo yum install ctags
 
 # git settings
 mkdir ~/git
