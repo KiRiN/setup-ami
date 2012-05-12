@@ -59,6 +59,8 @@ sudo mkswap /var/swapfile &&
 echo /var/swapfile none swap defaults 0 0 | sudo tee -a /etc/fstab &&
 sudo swapon -a
 
+# install open jdk devel
+sudo yum install java-1.6.0-openjdk-devel
 
 
 
