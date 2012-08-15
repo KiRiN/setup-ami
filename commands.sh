@@ -15,6 +15,7 @@ sudo yum install git
 sudo yum install make
 sudo yum install gcc
 sudo yum install ctags
+sudo yum install telnet
 
 # git settings
 mkdir ~/git
@@ -62,5 +63,17 @@ sudo swapon -a
 # install open jdk devel
 sudo yum install java-1.6.0-openjdk-devel
 
+# install postfix
+sudo yum install postfix
+# change mail daemon
+sudo /etc/init.d/sendmail stop
+sudo chkconfig sendmail off
+alternatives --config mta # select postfix for mta
+sudo /etc/init.d/postfix start
+sudo chkconfig postfix on
+# try command below to connect from localhost
+# telnet localhost 25
+# and you can send email by telnet or sendmail from localhost
+# need some more setting to use from outside
 
 
